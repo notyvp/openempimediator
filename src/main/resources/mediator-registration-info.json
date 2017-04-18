@@ -1,0 +1,33 @@
+{
+  "urn": "urn:uuid:066a7d70-2408-11e7-a9e4-85e6d7fed7b1",
+  "version": "0.1.0",
+  "name": "OpenEMPIMediator",
+  "description": "Work arond LLP by using TPC",
+  "endpoints": [
+    {
+      "name": "OpenEMPIMediator Route",
+      "host": "localhost",
+      "port": "3000",
+      "path": "/",
+      "type": "http"
+    }
+  ],
+  "defaultChannelConfig": [
+    {
+      "name": "OpenEMPIMediator",
+      "urlPattern": "^/$",
+      "type": "http",
+      "allow": ["openempimediator"],
+      "routes": [
+        {
+          "name": "OpenEMPIMediator Route",
+          "host": "localhost",
+          "port": "3000",
+          "path": "/",
+          "type": "http",
+          "primary": "true"
+        }
+      ]
+    }
+  ]
+}
